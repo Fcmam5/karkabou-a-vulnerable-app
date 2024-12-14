@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block title %}{{ band.name }} Details{% endblock %}
+{% block content %}
+<h1>{{ band.name }}</h1>
+<p>Phone: {{ band.phone_number }}</p>
+<p>Wilaya: {{ band.wilaya }}</p>
+
+<h2>Musicians</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Address</th>
+      <th>Instrument</th>
+      <th>Phone</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for musician in musicians %}
+    <tr>
+      <td>{{ musician.first_name }}</td>
+      <td>{{ musician.last_name }}</td>
+      <td>{{ musician.address }}</td>
+      <td>{{ musician.instrument }}</td>
+      <td>{{ musician.phone_number }}</td>
+      <td>{{ musician.email }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+      <td colspan="6">No musicians found.</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<a href="{% url 'band_list' %}" class="btn btn-secondary">Back to Bands</a>
+{% endblock %}

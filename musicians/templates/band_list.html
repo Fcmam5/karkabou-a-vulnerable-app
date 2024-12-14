@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Band List{% endblock %}
+
+{% block content %}
+<h1>Bands</h1>
+
+<form method="GET" class="mb-4">
+    <input type="text" name="search" placeholder="Search Bands" class="form-control" value="{{ request.GET.search }}">
+    <select name="wilaya" class="form-control mt-2">
+        <option value="">Select Wilaya</option>
+        {% for code, name in wilayas %}
+            <option value="{{ code }}" {% if code == request.GET.wilaya %}selected{% endif %}>{{ name }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit" class="btn btn-primary mt-2">Filter</button>
+</form>
+
+<ul class="list-group">
+    {% for band in bands %}
+        <li class="list-group-item">
+            <a href="{% url 'band_detail' band.id %}">{{ band.name }}</a> - {{ band.wilaya }}
+        </li>
+    {% empty %}
+        <li class="list-group-item">No bands found.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
