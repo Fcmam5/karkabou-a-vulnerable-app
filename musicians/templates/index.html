@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Band List{% endblock %}
+
+{% block content %}
+<main>
+    <div class="card">
+        <div class="card-body">
+            <h1 class="h3">
+                Welcome to Karkabou app
+            </h1>
+
+            <br>
+            <p>
+                Start by searching for a Karkabou band in your area!
+            </p>
+            <br>
+            <div>
+                <form method="GET" class="mb-4" action="{% url 'band_list' %}">
+                    <input type="text" name="search" placeholder="Search Bands" class="form-control" value="{{ request.GET.search }}">
+                    <button type="submit" class="btn btn-primary mt-2">Filter</button>
+                </form>
+            </div>
+        </div>
+      </div>
+</main>
+
+{% endblock %}

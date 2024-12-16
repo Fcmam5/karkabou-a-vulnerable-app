@@ -7,23 +7,23 @@
 
 ## Overview
 
-Karkabou is a Django application where users can find and contact Karkabou music groups. This app is **not designed for production use**; instead, it is a demonstration project to help developers understand the importance of privacy compliance and secure coding practices.
+Karkabou is a Django application where users can find and contact Karkabou music groups. Users can register their groups for free, but we intend to make this into a premium feature in the future.
 
+For now, our application allows anyone to register their groups and manage their musicians.
 
-> [!IMPORTANT] Disclaimer
-> This app **does not respect user privacy**. Data is handled in ways that could lead to serious privacy breaches and security vulnerabilities if implemented in a real-world scenario.
+Any musician can register to our application, and we can add them to their respective bands.
+
+We had to rush creating this application since our innovative idea has to go to market before weddings & celebrations season, so we may overlooked some things.
+
+> [!IMPORTANT]
+> 
+> Again, this app is **not designed for production use** and **does not respect user privacy**; instead, it is a demonstration project to help developers understand the importance of privacy compliance and secure coding practices.
+
 
 - [Karkabou](#karkabou)
   - [Overview](#overview)
-  - [Features](#features)
   - [Requirements](#requirements)
   - [Installation](#installation)
-
-
-## Features
-- **Browse Groups**: Users can search for Karkabou groups by location and genre.
-- **Public Contact Info**: Group contact information is displayed without any access control.
-- **Track and Log User Actions**: User actions are logged.
 
 ## Requirements
 - Python 3.11+

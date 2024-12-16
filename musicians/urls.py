@@ -1,8 +1,11 @@
 from django.urls import path
-from .views import band_list, band_detail, sign_up,login_view, logout_view, privacy_policy_view, terms_of_service_view
+# clean .views imports
+#from .views import band_list, band_detail, sign_up,login_view, logout_view, privacy_policy_view, terms_of_service_view
+from .views import *
 
 
 urlpatterns = [
+    path('', index_page, name='index_page'),
     path('bands/', band_list, name='band_list'),
     path('bands/<int:band_id>/', band_detail, name='band_detail'),
     path('sign-up/', sign_up, name='sign_up'),

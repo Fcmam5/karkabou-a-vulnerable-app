@@ -58,6 +58,8 @@ class Wilaya(models.TextChoices):
 class Band(models.Model):
     name = models.CharField(max_length=200, blank=False, null=False)
     phone_number = models.CharField(max_length=10, blank=False, null=False)
+    musicians = models.ManyToManyField('Musician', related_name='bands_musicians')
+
     wilaya = models.CharField(
         max_length=2,
         choices=Wilaya.choices,
@@ -106,4 +108,8 @@ class Musician(AbstractBaseUser, PermissionsMixin):
     REQUIRED_FIELDS = ['first_name', 'last_name']
 
     def full_name(self):
-        return self.first_name + " " + self.last_name
+        return f"{self.first_name} {self.last_name}"
+
+    # display by full name
+    def __str__(self):
+        return self.full_name()

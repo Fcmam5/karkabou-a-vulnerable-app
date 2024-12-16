@@ -69,6 +69,9 @@ def logout_view(request):
     return redirect('/')
 
 
+def index_page(request):
+    return render(request, 'index.html')
+
 def privacy_policy_view(request):
     return render(request, 'tnc/privacy.html')
 
