@@ -29,9 +29,9 @@ class Command(BaseCommand):
                 birth_date='1990-01-01',
                 instrument='Derbouka',
                 phone_number='9876543210',
-                band=Band.objects.get(name='Hamamat') # Assuming you have a foreign key relationship
+                band=Band.objects.get(name='Hamamat')
             )
-            musician.set_password('your_password') # Set password separately (important for security)
+            musician.set_password('your_password') 
             musician.save()
             self.stdout.write(self.style.SUCCESS('Successfully created musician.'))
         else:

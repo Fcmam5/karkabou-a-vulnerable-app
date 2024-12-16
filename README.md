@@ -24,6 +24,7 @@ We had to rush creating this application since our innovative idea has to go to 
   - [Overview](#overview)
   - [Requirements](#requirements)
   - [Installation](#installation)
+  - [License](#license)
 
 ## Requirements
 - Python 3.11+
@@ -51,3 +52,7 @@ We had to rush creating this application since our innovative idea has to go to 
     ```bash
     python manage.py runserver
     ```
+
+## License
+
+This project is licensed under the [BOLA License](./LICENSE).

@@ -1,6 +1,4 @@
 from django.urls import path
-# clean .views imports
-#from .views import band_list, band_detail, sign_up,login_view, logout_view, privacy_policy_view, terms_of_service_view
 from .views import *
 
 

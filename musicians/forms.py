@@ -8,7 +8,7 @@ from django import forms
 class RegistrationForm(UserCreationForm):
     class Meta:
         model = Musician
-        fields = ['first_name', 'last_name', 'email', 'address', 'birth_date', 'instrument', 'phone_number'] # Remove password from fields/form
+        fields = ['first_name', 'last_name', 'email', 'address', 'birth_date', 'instrument', 'phone_number']
         widgets = {
             'birth_date': forms.DateInput(attrs={'type': 'date'}),
         }
